@@ -1,0 +1,180 @@
+h1 {
+  text-align: left;
+}
+h2 {
+  text-align: center;
+  margin: auto;
+  position: relative;
+  bottom: 125px;
+  font-size: 24px;
+}
+
+h3 {
+  margin: 25px auto;
+}
+
+i {
+  display: block;
+  margin: auto;
+  font-size: 45px;
+}
+i:hover {
+  cursor: pointer;
+  font-size: 50px;
+  color: rgb(8, 90, 110);
+}
+
+hr {
+  border: 2px solid #215258;
+  opacity: 10;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+small {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 20px;
+}
+
+#convert {
+  font-size: 13px;
+}
+
+.searchButton {
+  background-color: #4399ac;
+  color: #fff;
+  border: 1px solid #225258;
+  border-radius: 4px;
+}
+.cityInput {
+  margin: 10px 5px auto;
+  width: 400px;
+  border: 1px solid #215258;
+  background-color: #d2eef5;
+  box-shadow: 2px 2px 5px rgb(31, 67, 73);
+}
+
+.container {
+  text-align: center;
+  margin: 30px auto;
+  padding: 25px;
+  height: 520px;
+  box-shadow: 5px 5px 10px gray;
+  border-radius: 10px;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.currentWeatherPlatform {
+  display: block;
+  text-align: center;
+  margin: 10px 15px auto;
+  padding: 15px;
+  max-width: 400px;
+  height: 450px;
+  background-color: #c4ebf4;
+  border: 3px solid #215258;
+  box-shadow: 5px 5px 15px rgb(31, 67, 73);
+  border-radius: 190px;
+  transition: all 200ms ease-in-out;
+}
+
+.currentWeatherPlatform:hover {
+  cursor: pointer;
+  box-shadow: 5px 5px 15px rgb(63, 17, 17);
+}
+
+.weatherForecastPlatform {
+  display: block;
+  text-align: center;
+  position: relative;
+  margin: 55px auto;
+  max-width: 550px;
+  transition: all 200ms ease-in-out;
+}
+.mainWeather {
+  margin: auto;
+}
+.nowTemp {
+  font-size: 55px;
+  margin: auto;
+  line-height: 45px;
+  padding: 0;
+}
+
+.currLocatButton {
+  background-color: #4399ac;
+  color: #fff;
+  border: 1px solid #225258;
+  border-radius: 4px;
+}
+
+.currentWeatherRange {
+  padding: 0;
+  margin: auto;
+  font-size: 18px;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 500;
+}
+
+.forecastWeatherPlatform {
+  display: block;
+  text-align: center;
+  padding: 15px;
+  margin: 45px 10px auto;
+}
+
+.fa-magnifying-glass {
+  font-size: 24px;
+}
+
+.weatherSpecs {
+  font-size: 18px;
+  font-family: "Times New Roman", Times, serif;
+  text-align: left;
+  list-style-type: none;
+  padding: 20px;
+  margin: 25px 5px auto;
+}
+
+.vals {
+  position: relative;
+  left: 205px;
+  bottom: 160px;
+}
+
+.vl {
+  border-left: 1px solid #215258;
+  height: 78px;
+  position: relative;
+  left: 200px;
+  bottom: 78px;
+}
+
+.range {
+  font-family: "Courier New", Courier, monospace;
+}
+
+.col {
+  display: inline-block;
+  line-height: 30px;
+  background-color: #d1eef5;
+  margin: 10px 15px;
+  padding: 10px 18px;
+  border-radius: 4px;
+  box-shadow: 2px 2px 5px rgb(31, 67, 73);
+}
+.col:hover {
+  cursor: pointer;
+  padding: 14px 22px;
+  box-shadow: 2px 2px 5px rgb(63, 17, 17);
+}
+
+.fa-sun,
+.fa-cloud-sun,
+.fa-cloud-showers-heavy {
+  color: rgb(5, 152, 172);
+}
