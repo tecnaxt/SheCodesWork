@@ -76,7 +76,7 @@ small {
   text-align: center;
   margin: 10px 15px auto;
   padding: 15px;
-  max-width: 300px;
+  max-width: 220px;
   height: 450px;
   background-color: #c4ebf4;
   border: 3px solid #215258;
@@ -95,7 +95,7 @@ small {
   text-align: center;
   position: relative;
   margin: 55px auto;
-  max-width: 550px;
+  max-width: 400px;
   transition: all 200ms ease-in-out;
 }
 .mainWeather {
