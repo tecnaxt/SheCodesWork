@@ -47,6 +47,10 @@ small {
   font: 20px;
 }
 
+#currWeaPlat {
+  max-width: 220px !important;
+}
+
 .searchButton {
   background-color: #4399ac;
   color: #fff;
