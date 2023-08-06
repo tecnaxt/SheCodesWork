@@ -83,14 +83,14 @@ small {
   height: 450px;
   background-color: #c4ebf4;
   border: 3px solid #215258;
-  box-shadow: 5px 5px 15px rgb(31, 67, 73);
+  box-shadow: 5px 5px 10px rgb(31, 67, 73);
   border-radius: 190px;
   transition: all 200ms ease-in-out;
 }
 
 .currentWeatherPlatform:hover {
   cursor: pointer;
-  box-shadow: 5px 5px 15px rgb(0, 183, 43);
+  box-shadow: 5px 5px 15px rgb(2, 4, 93);
 }
 
 .weatherForecastPlatform {
@@ -177,7 +177,7 @@ small {
 .col:hover {
   cursor: pointer;
   padding: 14px 22px;
-  box-shadow: 2px 2px 5px rgb(63, 17, 17);
+  box-shadow: 2px 2px 5px rgb(2, 4, 93);
 }
 
 .fa-sun,
