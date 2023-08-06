@@ -24,8 +24,8 @@ i:hover {
 }
 
 hr {
-  border: 2px solid #215258;
-  opacity: 10;
+  border: 2px solid #215258 !important;
+  opacity: 10 !important;
 }
 
 ul {
@@ -48,7 +48,7 @@ small {
 }
 
 #currWeaPlat {
-  max-width: 220px !important;
+  max-width: 400px !important;
 }
 
 .searchButton {
@@ -80,7 +80,6 @@ small {
   text-align: center;
   margin: 10px 15px auto;
   padding: 15px;
-  max-width: 220px;
   height: 450px;
   background-color: #c4ebf4;
   border: 3px solid #215258;
@@ -99,7 +98,7 @@ small {
   text-align: center;
   position: relative;
   margin: 55px auto;
-  max-width: 400px;
+  max-width: 550px;
   transition: all 200ms ease-in-out;
 }
 .mainWeather {
