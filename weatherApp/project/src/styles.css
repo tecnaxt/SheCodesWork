@@ -6,7 +6,6 @@ h2 {
   margin: auto;
   position: relative;
   bottom: 125px;
-  font-size: 24px;
 }
 
 h3 {
@@ -37,11 +36,15 @@ ul {
 
 small {
   font-family: "Courier New", Courier, monospace;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 #convert {
   font-size: 13px;
+}
+
+#current-date {
+  font: 20px;
 }
 
 .searchButton {
