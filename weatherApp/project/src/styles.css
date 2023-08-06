@@ -5,7 +5,8 @@ h2 {
   text-align: center;
   margin: auto;
   position: relative;
-  bottom: 125px;
+  bottom: 100px;
+  font-size: 24px !important; 
 }
 
 h3 {
@@ -36,15 +37,14 @@ ul {
 
 small {
   font-family: "Courier New", Courier, monospace;
-  font-size: 16px;
+  font-size: 20px !important;
 }
 
+#weaSpecs {
+  margin: 35px 5px auto;
+}
 #convert {
   font-size: 13px;
-}
-
-#current-date {
-  font: 20px;
 }
 
 #currWeaPlat {
@@ -90,7 +90,7 @@ small {
 
 .currentWeatherPlatform:hover {
   cursor: pointer;
-  box-shadow: 5px 5px 15px rgb(63, 17, 17);
+  box-shadow: 5px 5px 15px rgb(0, 183, 43);
 }
 
 .weatherForecastPlatform {
@@ -138,6 +138,7 @@ small {
 }
 
 .weatherSpecs {
+  display: block;
   font-size: 18px;
   font-family: "Times New Roman", Times, serif;
   text-align: left;
