@@ -1,0 +1,67 @@
+em {
+  color: #977006;
+  font-weight: bolder;
+}
+
+.owners {
+  display: block;
+  margin: 20px auto;
+  width: 300px;
+  border: 3px;
+
+  --g: 4px; /* the gap */
+  --b: 12px; /* border thickness*/
+  --c: #977006; /* the color */
+
+  padding: calc(var(--g) + var(--b));
+  --_c: #0000 0 25%, var(--c) 0 50%;
+  --_g1: repeating-linear-gradient(90deg, var(--_c)) repeat-x;
+  --_g2: repeating-linear-gradient(180deg, var(--_c)) repeat-y;
+  background: var(--_g1) var(--_p, 25%) 0, var(--_g2) 0 var(--_p, 125%),
+    var(--_g1) var(--_p, 125%) 100%, var(--_g2) 100% var(--_p, 25%);
+  background-size: 200% var(--b), var(--b) 200%;
+  cursor: pointer;
+  filter: contrast(50%);
+  transition: 0.3s;
+}
+.owners:hover {
+  --_p: 75%;
+  filter: contrast(100%);
+}
+
+.about-paragraph {
+  display: block;
+  margin: auto;
+  padding: 15px;
+  text-align: center;
+  font-size: 22px;
+  font-family: "Roboto Slab", serif;
+  font-weight: 300;
+}
+
+.about-social-media {
+  position: absolute;
+  top: 750px;
+  left: 100px;
+}
+.about-list-group-item {
+  border: none;
+  list-style: none;
+  font-size: 20px;
+  padding: 5px 15px;
+  color: #977006;
+}
+
+.about-praise {
+  font-family: "Courier New", Courier, monospace;
+  position: relative;
+  bottom: 30px;
+  left: 1050px;
+}
+
+#brand-name-about {
+  font-size: 28px;
+  text-shadow: 2px 1px #000;
+  font-weight: 500;
+  color: #977006;
+}
