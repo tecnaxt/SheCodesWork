@@ -13,6 +13,20 @@ h3 {
   margin: 25px auto;
 }
 
+a {
+  font-family: monospace;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+a:visited {
+  color:  #054d5d;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
 i {
   display: block;
   margin: auto;
