@@ -60,14 +60,15 @@ em {
 
 .about-praise {
   font-family: "Courier New", Courier, monospace;
+  color: #fff;
   position: relative;
   bottom: 30px;
   left: 1150px;
 }
 
 #brand-name-about {
-  font-size: 28px;
-  text-shadow: 2px 1px #000;
+  font-size: 24px;
+  text-shadow: 2px 2px #000;
   font-weight: 500;
-  color: #977006;
+  color:#fff;
 }

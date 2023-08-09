@@ -1,13 +1,16 @@
 body {
   background-image: url("../images/chris-flexen-KBddzD_rWAE-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  backdrop-filter: blur(5px);
 }
 
 p {
   display: block;
   margin: auto;
   font-size: 45px;
-  color: #fff;
-  text-shadow: 2px 2px #000;
+  color: #000;
+  text-shadow: 2px 2px #fff;
   font-family: "Bubblegum Sans", cursive;
   position: absolute;
   bottom: 300px;
@@ -89,6 +92,7 @@ img:hover {
 
 .praise {
   font-family: "Courier New", Courier, monospace;
+  color: #fff;
   text-align: right;
   position: relative;
   bottom: 30px;
@@ -99,5 +103,5 @@ img:hover {
   border: none;
 }
 #brand-name {
-  color: #977006;
+  color:#977006;
 }
