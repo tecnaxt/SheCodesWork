@@ -14,6 +14,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;500&family=Roboto:wght@300;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
       href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Caprasimo&display=swap"
       rel="stylesheet"
     />
@@ -26,27 +32,28 @@
           <i class="fa-solid fa-sun"></i>
           <br />
           <p class="mainWeather">
-            <span class="nowTemp">
-            25°C
-            </span>
-            <i class="fa-solid fa-arrows-rotate" id="convert"></i></p>
-          <p class="currentWeatherRange">
-            <span id="min"> 21°</span>|<span id="max"> 34°</span>
+            <span class="nowTemp"> 25°C</span>
+            <i class="fa-solid fa-arrows-rotate" id="convert"></i>
           </p>
+          <p class="currentWeatherRange">
+            <span id="min"> 21</span>°|<span id="max"> 34</span>°
+          </p>
+          <span id="weatherDescription">Clear Sky </span>
           <div class="row weatherSpecs">
-              <div id="weaSpecs">
-                  <div class="col-7">
-                    Precipitation<br />
-                    Wind Speed<br />
-                    Humidity
-                  </div>
-                  <div class="vl"></div>
-                  <div class="col-5 vals">
-                    0%<br />
-                    10km/h<br />
-                    40%
-                  </div>
+            <div id="weaSpecs">
+              <div class="col-7">
+                Precipitation<br />
+                Wind Speed<br />
+                Humidity
               </div>
+              <div class="vl"></div>
+              <div class="col-5 vals">
+                0%<br />
+                <span id="wind">10</span> km/h
+                <br />
+                <span id="humid">40</span>%
+              </div>
+            </div>
             <h2>
               <span id="current-date">The date</span> <br />
               <small id="current-time"> time</small>
@@ -55,9 +62,9 @@
         </div>
 
         <div class="col-7 forecastWeatherPlatform">
-          <h1 >
+          <h1>
             <i class="fa-solid fa-location-dot"></i>
-            <span id="city-name"> Polokwane, SA <span>
+            <span id="city-name"> Polokwane, SA </span>
           </h1>
           <hr />
           <div class="row row-col-5">
@@ -110,19 +117,26 @@
             </ul>
           </div>
 
-            <div class="searchBar">
-              <form id="search-form">
-                <input type="text" class="cityInput" id="search-bar" placeholder="Search City" />
-                <input type="submit" class="searchButton" value="Search"></input>
-                <button class="currLocatButton"> Current Location </button>
-              </form>
+          <div class="searchBar">
+            <form id="search-form">
+              <input
+                type="text"
+                class="cityInput"
+                id="search-bar"
+                placeholder="Search City"
+              />
+              <input type="submit" class="searchButton" value="Search" />
+              <button class="currLocatButton">Current Location</button>
+            </form>
           </div>
           <hr />
         </div>
       </div>
     </div>
-    <a href="https://github.com/tecnaxt/SheCodesWork/tree/main" target="_blank">Source code 🤓
+    <a href="https://github.com/tecnaxt/SheCodesWork/tree/main" target="_blank">
+      Open-source code <span>by Tumelo Matlou.</span>
     </a>
+
     <script
       src="https://kit.fontawesome.com/1b1227959d.js"
       crossorigin="anonymous"

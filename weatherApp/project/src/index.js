@@ -34,6 +34,10 @@ let hours = now.getHours();
 if (minutes < 10) {
   minutes = `0${minutes}`;
 }
+if (hours < 10) {
+  hours = `0${hours}`;
+}
+
 time.innerHTML = `${hours}:${minutes}`;
 
 function updateCityInfo(response) {
@@ -42,18 +46,19 @@ function updateCityInfo(response) {
   let nowTemp = document.querySelector(".nowTemp");
   let minTemp = document.querySelector("#min");
   let maxTemp = document.querySelector("#max");
-  let roundedTemp = Math.round(`${response.data.main.temp}`);
-  let roundedMin = Math.round(`${response.data.main.temp_min}`);
-  let roundedMax = Math.round(`${response.data.main.temp_max}`);
+  let humid = document.querySelector("#humid");
+  let windSpeed = document.querySelector("#wind");
+  let descriptor = document.querySelector("#weatherDescription");
+console.log(descriptor)
 
-  console.log(roundedTemp);
-  console.log(roundedMin);
-  console.log(roundedMax);
-
-  cityName.innerHTML = `${response.data.name}, ${response.data.sys.country}`;
-  nowTemp.innerHTML = `${roundedTemp}°C`;
-  minTemp.innerHTML = `${roundedMin}°`;
-  maxTemp.innerHTML = `${roundedMax}°`;
+  cityName.innerHTML = response.data.name + ", " + response.data.sys.country;
+  nowTemp.innerHTML = Math.round(response.data.main.temp) + "°C";
+  minTemp.innerHTML = Math.round(response.data.main.temp_min);
+  maxTemp.innerHTML = Math.round(response.data.main.temp_max);
+  humid.innerHTML = response.data.main.humidity;
+  windSpeed.innerHTML = Math.round(response.data.wind.speed);
+  descriptor.innerHTML = response.data.weather[0].description;
+   
 }
 
 function searchInputCity(event) {

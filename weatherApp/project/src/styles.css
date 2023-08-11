@@ -1,12 +1,14 @@
 h1 {
   text-align: left;
+  font-family: 'Abril Fatface';
 }
 h2 {
   text-align: center;
   margin: auto;
   position: relative;
   bottom: 100px;
-  font-size: 24px !important; 
+  font-size: 24px !important;
+  font-weight: 300 !important;
 }
 
 h3 {
@@ -15,12 +17,12 @@ h3 {
 
 a {
   font-family: monospace;
-  position: absolute;
-  bottom: 0;
-  right: 0;
+  margin: 10px auto;
+  padding-left: 55px;
+  text-decoration: none !important;
 }
 a:visited {
-  color:  #054d5d;
+  color: #1f6bd5;
 }
 
 a:hover {
@@ -31,16 +33,13 @@ i {
   display: block;
   margin: auto;
   font-size: 45px;
-}
-i:hover {
-  cursor: pointer;
-  font-size: 50px;
-  color: rgb(8, 90, 110);
+  color: rgb(0, 0, 0);
 }
 
 hr {
-  border: 2px solid #215258 !important;
-  opacity: 10 !important;
+  border: 1px solid #858585 !important;
+  opacity: 7 !important;
+  box-shadow: 2px 2px 5px rgb(71, 71, 71);
 }
 
 ul {
@@ -54,8 +53,16 @@ small {
   font-size: 20px !important;
 }
 
+span {
+  color: #000;
+}
+
+#weatherDescription {
+  text-transform: capitalize;
+}
+
 #weaSpecs {
-  margin: 35px 5px auto;
+  margin: 25px 5px auto;
 }
 #convert {
   font-size: 13px;
@@ -66,27 +73,37 @@ small {
 }
 
 .searchButton {
-  background-color: #4399ac;
+  background-color: #4b96f7;
   color: #fff;
-  border: 1px solid #225258;
+  font-family: 'roboto';
+  font-weight: 300;
+  text-shadow: 1px 1px 3px #000;
+  border: 1px solid #525252;
   border-radius: 4px;
+  box-shadow: 2px 2px 5px rgb(71, 71, 71);
 }
 .cityInput {
   margin: 10px 5px auto;
   width: 400px;
-  border: 1px solid #215258;
-  background-color: #d2eef5;
-  box-shadow: 2px 2px 5px rgb(31, 67, 73);
+  border: 1px solid #535353;
+  background-color: #fff;
+  font-family: 'roboto';
+  font-weight: 300;
+  box-shadow: 2px 2px 5px rgb(60, 60, 60);
 }
 
 .container {
   text-align: center;
-  margin: 30px auto;
+  margin: 10px auto;
   padding: 25px;
-  height: 520px;
+  height: 505px;
   box-shadow: 5px 5px 10px gray;
   border-radius: 10px;
-  font-family: "Times New Roman", Times, serif;
+  font-family: 'roboto';
+  font-weight: 300;
+  background-image: url("../images/adriel-kloppenburg-en-5xoYnjTE-unsplash.jpg");
+  background-size: 1400px 600px;
+  background-repeat: no-repeat;
 }
 
 .currentWeatherPlatform {
@@ -95,9 +112,8 @@ small {
   margin: 10px 15px auto;
   padding: 15px;
   height: 450px;
-  background-color: #c4ebf4;
-  border: 3px solid #215258;
-  box-shadow: 5px 5px 10px rgb(31, 67, 73);
+  background-color: #f4f7f80c;
+  box-shadow: 5px 5px 10px rgb(58, 58, 58);
   border-radius: 190px;
   transition: all 200ms ease-in-out;
 }
@@ -105,6 +121,7 @@ small {
 .currentWeatherPlatform:hover {
   cursor: pointer;
   box-shadow: 5px 5px 15px rgb(2, 4, 93);
+  backdrop-filter: blur(9px);
 }
 
 .weatherForecastPlatform {
@@ -116,7 +133,8 @@ small {
   transition: all 200ms ease-in-out;
 }
 .mainWeather {
-  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 2px;
 }
 .nowTemp {
   font-size: 55px;
@@ -126,10 +144,14 @@ small {
 }
 
 .currLocatButton {
-  background-color: #4399ac;
+  background-color: #3984d0;
   color: #fff;
-  border: 1px solid #225258;
+  font-family: 'roboto';
+  font-weight: 300;  
+  text-shadow: 1px 1px 3px #000;
+  border: 1px solid #505050;
   border-radius: 4px;
+  box-shadow: 2px 2px 5px rgb(71, 71, 71);
 }
 
 .currentWeatherRange {
@@ -154,7 +176,7 @@ small {
 .weatherSpecs {
   display: block;
   font-size: 18px;
-  font-family: "Times New Roman", Times, serif;
+  font-family: "Roboto";
   text-align: left;
   list-style-type: none;
   padding: 20px;
@@ -168,7 +190,7 @@ small {
 }
 
 .vl {
-  border-left: 1px solid #215258;
+  border-left: 1px solid #565757;
   height: 78px;
   position: relative;
   left: 200px;
@@ -182,20 +204,26 @@ small {
 .col {
   display: inline-block;
   line-height: 30px;
-  background-color: #d1eef5;
+  background-color: #f3f5f609;
   margin: 10px 15px;
   padding: 10px 18px;
   border-radius: 4px;
-  box-shadow: 2px 2px 5px rgb(31, 67, 73);
+  box-shadow: 2px 2px 5px rgb(71, 71, 71);
 }
 .col:hover {
   cursor: pointer;
   padding: 14px 22px;
   box-shadow: 2px 2px 5px rgb(2, 4, 93);
+  backdrop-filter: blur(9px);
 }
 
-.fa-sun,
-.fa-cloud-sun,
+.fa-sun {
+  color: rgb(7, 73, 127);
+}
+.fa-cloud-sun {
+  color: rgb(7, 73, 127);
+}
+
 .fa-cloud-showers-heavy {
-  color: rgb(5, 152, 172);
+  color: rgb(7, 73, 127);
 }
