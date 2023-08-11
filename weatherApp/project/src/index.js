@@ -40,6 +40,7 @@ if (hours < 10) {
 
 time.innerHTML = `${hours}:${minutes}`;
 
+
 function updateCityInfo(response) {
   console.log(response);
   let cityName = document.querySelector("#city-name");
@@ -49,7 +50,6 @@ function updateCityInfo(response) {
   let humid = document.querySelector("#humid");
   let windSpeed = document.querySelector("#wind");
   let descriptor = document.querySelector("#weatherDescription");
-console.log(descriptor)
 
   cityName.innerHTML = response.data.name + ", " + response.data.sys.country;
   nowTemp.innerHTML = Math.round(response.data.main.temp) + "°C";
@@ -58,7 +58,6 @@ console.log(descriptor)
   humid.innerHTML = response.data.main.humidity;
   windSpeed.innerHTML = Math.round(response.data.wind.speed);
   descriptor.innerHTML = response.data.weather[0].description;
-   
 }
 
 function searchInputCity(event) {
