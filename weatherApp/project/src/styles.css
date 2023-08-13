@@ -105,28 +105,6 @@ span {
   padding: 4px 5px 9px;
 }
 
-.searchButton {
-  background-color: #61101061;
-  color: #fff;
-  font-family: "Abel";
-  text-shadow: 1px 1px 3px #000;
-  border: 1px solid #000000;
-  border-radius: 4px;
-  box-shadow: 2px 2px 5px rgb(0, 0, 0);
-}
-.cityInput {
-  margin: 10px 5px auto;
-  margin-right: 0px;
-  padding: 6px;
-  padding-right: 0px;
-  width: 400px;
-  border: 1px solid #000000;
-  border-radius: 7px;
-  background-color: #ffffff;
-  font-family: "Abel";
-  box-shadow: 2px 2px 5px rgb(0, 0, 0);
-}
-
 .container {
   text-align: center;
   margin: 10px auto;
@@ -160,16 +138,6 @@ span {
   box-shadow: 5px 5px 15px rgb(2, 4, 93);
   backdrop-filter: blur(9px);
 }
-
-.weatherForecastPlatform {
-  display: block;
-  text-align: center;
-  position: relative;
-  color: #fff;
-  margin: 55px auto;
-  max-width: 550px;
-  transition: all 200ms ease-in-out;
-}
 .mainWeather {
   margin-top: 10px;
   margin-bottom: 2px;
@@ -181,29 +149,12 @@ span {
   padding: 0;
 }
 
-.currLocatButton {
-  background-color: #61101072;
-  color: #fff;
-  font-family: "Abel";
-  text-shadow: 1px 1px 3px #000;
-  border: 1px solid #000000;
-  border-radius: 4px;
-  box-shadow: 2px 2px 5px rgb(0, 0, 0);
-}
-
 .currentWeatherRange {
   padding: 0;
   margin: auto;
   font-size: 18px;
   font-family: "Courier New", Courier, monospace;
   font-weight: 500;
-}
-
-.forecastWeatherPlatform {
-  display: block;
-  text-align: center;
-  padding: 15px;
-  margin: 45px 10px auto;
 }
 
 .weatherSpecs {
@@ -218,22 +169,11 @@ span {
   margin: 25px 5px auto;
 }
 
-.vals {
-  position: relative;
-  left: 205px;
-  bottom: 160px;
-}
-
-.vl {
-  border-left: 1px solid #000000;
-  height: 78px;
-  position: relative;
-  left: 200px;
-  bottom: 78px;
-}
-
-.range {
-  font-family: "Courier New", Courier, monospace;
+.forecastWeatherPlatform {
+  display: block;
+  text-align: center;
+  padding: 15px;
+  margin: 45px 10px auto;
 }
 
 .col {
@@ -252,6 +192,10 @@ span {
   backdrop-filter: blur(9px);
 }
 
+.range {
+  font-family: "Courier New", Courier, monospace;
+}
+
 .fa-sun {
   color: rgb(254, 247, 42);
   text-shadow: 2px 2px 4px #000;
@@ -264,4 +208,37 @@ span {
 .fa-cloud-showers-heavy {
   color: rgb(128, 126, 126);
   text-shadow: 2px 2px 4px #000;
+}
+
+.cityInput {
+  margin: 10px 5px auto;
+  margin-right: 0px;
+  padding: 6px;
+  padding-right: 0px;
+  width: 400px;
+  border: 1px solid #000000;
+  border-radius: 7px;
+  background-color: #ffffff;
+  font-family: "Abel";
+  box-shadow: 2px 2px 5px rgb(0, 0, 0);
+}
+
+.searchButton {
+  background-color: #61101061;
+  color: #fff;
+  font-family: "Abel";
+  text-shadow: 1px 1px 3px #000;
+  border: 1px solid #000000;
+  border-radius: 4px;
+  box-shadow: 2px 2px 5px rgb(0, 0, 0);
+}
+
+.currLocatButton {
+  background-color: #61101072;
+  color: #fff;
+  font-family: "Abel";
+  text-shadow: 1px 1px 3px #000;
+  border: 1px solid #000000;
+  border-radius: 4px;
+  box-shadow: 2px 2px 5px rgb(0, 0, 0);
 }
