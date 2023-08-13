@@ -71,24 +71,15 @@ span {
   font-size: 20px;
 }
 
-#windButton {
+#windButton, #humidButton {
   display: block;
   margin: 25px auto;
   padding: 0px;
   border: none;
   background-color: #0000004d;
   border-radius: 7px;
-  box-shadow: 2px 2px 5px rgb(71, 71, 71);
+  box-shadow: 2px 2px 5px rgb(0, 0, 0);
 
-}
-#humidButton {
-  display: block;
-  margin: 25px auto;
-  padding: 0px;
-  border: none;
-  background-color: #0000004d;
-  border-radius: 7px;
-  box-shadow: 2px 2px 5px rgb(71, 71, 71);
 }
 
 #convert {
@@ -103,19 +94,17 @@ span {
   font-size: 24px !important;
   font-weight: 300 !important;
 }
+
+
 .timeDate, .range, .fa-magnifying-glass, .fa-location-dot, .nowTemp{
   text-shadow: 2px 2px 4px #000;
   color: #fff;
 }
-.fa-magnifying-glass {
-  font-size: 24px;
+.fa-magnifying-glass, .fa-location-dot {
+  font-size: 22px;
   padding: 4px 5px 9px;
 }
 
-.fa-location-dot {
-  font-size: 24px;
-  padding: 0px 5px 5px;
-}
 .searchButton {
   background-color: #61101061;
   color: #fff;
@@ -127,7 +116,9 @@ span {
 }
 .cityInput {
   margin: 10px 5px auto;
+  margin-right: 0px;
   padding: 6px;
+  padding-right: 0px;
   width: 400px;
   border: 1px solid #000000;
   border-radius: 7px;
@@ -192,7 +183,6 @@ span {
 
 .currLocatButton {
   background-color: #61101072;
-  padding: px;
   color: #fff;
   font-family: "Abel";
   text-shadow: 1px 1px 3px #000;
