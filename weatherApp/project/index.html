@@ -14,7 +14,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;500&family=Roboto:wght@300;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Abel&family=Roboto+Slab:wght@300;500&family=Roboto:wght@300;500&display=swap"
       rel="stylesheet"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -40,22 +40,17 @@
           </p>
           <span id="weatherDescription">Clear Sky </span>
           <div class="row weatherSpecs">
-            <div id="weaSpecs">
-              <div class="col-7">
-                Precipitation<br />
-                Wind Speed<br />
-                Humidity
-              </div>
-              <div class="vl"></div>
-              <div class="col-5 vals">
-                0%<br />
-                <span id="wind">10</span> km/h
-                <br />
-                <span id="humid">40</span>%
-              </div>
-            </div>
+            <button class="col-6" id="windButton">
+              Wind <span id="wind">10</span>km/h
+            </button>
+            <button class="col-6" id="humidButton">
+              Humidity
+              <span id="humid">40</span>%
+            </button>
+          </div>
+          <div class="timeDate">
             <h2>
-              Last updated at <br/>
+              Last updated at <br />
               <span id="current-date">The date</span><br />
               <small id="current-time"> time</small>
             </h2>
@@ -64,7 +59,6 @@
 
         <div class="col-7 forecastWeatherPlatform">
           <h1>
-            <i class="fa-solid fa-location-dot"></i>
             <span id="city-name"> Polokwane, SA </span>
           </h1>
           <hr />
@@ -118,16 +112,20 @@
             </ul>
           </div>
 
-          <div class="searchBar">
-            <form id="search-form">
+          <div class="row searchBar">
+            <form class="col-7" id="search-form">
               <input
                 type="text"
                 class="cityInput"
                 id="search-bar"
                 placeholder="Search City"
               />
-              <input type="submit" class="searchButton" value="Search" />
-              <button class="currLocatButton">Current Location</button>
+              <button class="col-1 searchButton">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </button>
+              <button class="col-1 currLocatButton">
+                <i class="fa-solid fa-location-dot"></i>
+              </button>
             </form>
           </div>
           <hr />
