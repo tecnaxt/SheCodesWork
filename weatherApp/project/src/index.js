@@ -40,7 +40,6 @@ if (hours < 10) {
 
 time.innerHTML = `${hours}:${minutes}`;
 
-
 function updateCityInfo(response) {
   console.log(response);
   let cityName = document.querySelector("#city-name");
@@ -50,6 +49,7 @@ function updateCityInfo(response) {
   let humid = document.querySelector("#humid");
   let windSpeed = document.querySelector("#wind");
   let descriptor = document.querySelector("#weatherDescription");
+  let iconElement = document.querySelector("#mainWeatherIcon");
 
   cityName.innerHTML = response.data.name + ", " + response.data.sys.country;
   nowTemp.innerHTML = Math.round(response.data.main.temp) + "°C";
@@ -58,6 +58,10 @@ function updateCityInfo(response) {
   humid.innerHTML = response.data.main.humidity;
   windSpeed.innerHTML = Math.round(response.data.wind.speed);
   descriptor.innerHTML = response.data.weather[0].description;
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
 }
 
 function searchInputCity(event) {
