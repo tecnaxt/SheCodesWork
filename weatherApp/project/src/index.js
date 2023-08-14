@@ -50,13 +50,14 @@ function updateCityInfo(response) {
   let windSpeed = document.querySelector("#wind");
   let descriptor = document.querySelector("#weatherDescription");
   let iconElement = document.querySelector("#mainWeatherIcon");
+  celsTemp = response.data.main.temp;
 
   cityName.innerHTML = response.data.name + ", " + response.data.sys.country;
-  nowTemp.innerHTML = Math.round(response.data.main.temp) + "°C";
-  minTemp.innerHTML = Math.round(response.data.main.temp_min);
-  maxTemp.innerHTML = Math.round(response.data.main.temp_max);
-  humid.innerHTML = response.data.main.humidity;
-  windSpeed.innerHTML = Math.round(response.data.wind.speed);
+  nowTemp.innerHTML = Math.round(response.data.main.temp);
+  minTemp.innerHTML = Math.round(response.data.main.temp_min)+ "°";
+  maxTemp.innerHTML = Math.round(response.data.main.temp_max)+ "°";
+  humid.innerHTML = response.data.main.humidity + "%";
+  windSpeed.innerHTML = Math.round(response.data.wind.speed) + " Km/H";
   descriptor.innerHTML = response.data.weather[0].description;
   iconElement.setAttribute(
     "src",
@@ -64,16 +65,17 @@ function updateCityInfo(response) {
   );
 }
 
-function searchInputCity(event) {
-  event.preventDefault();
-  let cityInput = document.querySelector("#search-bar");
-  //let cityName = document.querySelector("#city-name");
+function searchInputCity(city) {
   let apiKey = "8402ccd9e55983fce71eeeaa1d2bd1fc";
-  console.log(`${cityInput.value}`);
-
-  let url = `https://api.openweathermap.org/data/2.5/weather?q=${cityInput.value}&units=metric&appid=${apiKey}`;
+  let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
 
   axios.get(url).then(updateCityInfo);
+}
+
+function handleSearch(event) {
+  event.preventDefault();
+  let cityInput = document.querySelector("#search-bar");
+  searchInputCity(cityInput.value);
 }
 
 function currentLocationButton(position) {
@@ -90,8 +92,26 @@ function getCurrLocat() {
   navigator.geolocation.getCurrentPosition(currentLocationButton);
 }
 
+function convertToFahr(event) {
+  event.preventDefault();
+  let convertedFahrTemp = document.querySelector(".nowTemp");
+  let FahrFormula = (celsTemp * 9) / 5 + 32;
+  
+  alert(FahrFormula);
+ 
+  convertedFahrTemp.innerHTML = Math.round(FahrFormula);
+}
+
+let fahrUnit = document.querySelector("#fahr-link");
+fahrUnit.addEventListener("click",convertToFahr);
+
+let celsTemp =null;
+
 let currLocatButton = document.querySelector(".currLocatButton");
 currLocatButton.addEventListener("click", getCurrLocat);
 
+
 let search = document.querySelector("#search-form");
-search.addEventListener("click", searchInputCity);
+search.addEventListener("submit", handleSearch);
+
+searchInputCity("Polokwane");
