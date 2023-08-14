@@ -63,7 +63,6 @@ span {
 }
 
 #city-name,
-#convert,
 #min,
 #max,
 #humid,
@@ -74,6 +73,10 @@ span {
 #humidButton {
   color: #fff !important;
   text-shadow: 2px 2px 2px #000 !important;
+}
+#convert {
+  color: #fff !important;
+  text-shadow: 1px 1px 2px #000 !important;
 }
 
 #mainWeatherIcon {
@@ -89,10 +92,14 @@ span {
 }
 
 
+
 #cels-link, #fahr-link {
   padding-left: 5px;
   color: #fff;
   font-size: 14px;
+}
+#cels-link, #fahr-link:hover {
+  cursor: default;
 }
 
 #currWeaPlat {
@@ -112,6 +119,9 @@ span {
 #current-date {
   font-size: 24px !important;
   font-weight: 300 !important;
+}
+#current-time {
+text-shadow: 2px 2px 2px #000 !important;
 }
 
 .timeDate,
@@ -167,6 +177,10 @@ span {
   margin-left: 25px;
   padding-left: 20px;
 }
+.mainWeather:hover {
+  cursor: default;
+}
+
 .nowTemp {
   text-align: center;
   font-size: 55px;
@@ -174,6 +188,11 @@ span {
   line-height: 45px;
   padding: 0;
 }
+
+.active {
+  color: #000 !important;
+}
+
 
 .currentWeatherRange {
   padding: 0;

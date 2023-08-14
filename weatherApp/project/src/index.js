@@ -51,11 +51,14 @@ function updateCityInfo(response) {
   let descriptor = document.querySelector("#weatherDescription");
   let iconElement = document.querySelector("#mainWeatherIcon");
   celsTemp = response.data.main.temp;
+  
+  celsUnit.classList.add("active");
+  fahrUnit.classList.remove("active");
 
   cityName.innerHTML = response.data.name + ", " + response.data.sys.country;
   nowTemp.innerHTML = Math.round(response.data.main.temp);
-  minTemp.innerHTML = Math.round(response.data.main.temp_min)+ "°";
-  maxTemp.innerHTML = Math.round(response.data.main.temp_max)+ "°";
+  minTemp.innerHTML = Math.round(response.data.main.temp_min) + "°";
+  maxTemp.innerHTML = Math.round(response.data.main.temp_max) + "°";
   humid.innerHTML = response.data.main.humidity + "%";
   windSpeed.innerHTML = Math.round(response.data.wind.speed) + " Km/H";
   descriptor.innerHTML = response.data.weather[0].description;
@@ -96,20 +99,30 @@ function convertToFahr(event) {
   event.preventDefault();
   let convertedFahrTemp = document.querySelector(".nowTemp");
   let FahrFormula = (celsTemp * 9) / 5 + 32;
-  
-  alert(FahrFormula);
- 
+
+  celsUnit.classList.remove("active");
+  fahrUnit.classList.add("active");
   convertedFahrTemp.innerHTML = Math.round(FahrFormula);
 }
 
-let fahrUnit = document.querySelector("#fahr-link");
-fahrUnit.addEventListener("click",convertToFahr);
+function convertToCels(event) {
+  let convertedCelsTemp = document.querySelector(".nowTemp");
 
-let celsTemp =null;
+  celsUnit.classList.add("active");
+  fahrUnit.classList.remove("active");
+  convertedCelsTemp.innerHTML = Math.round(celsTemp);
+}
+
+let fahrUnit = document.querySelector("#fahr-link");
+fahrUnit.addEventListener("click", convertToFahr);
+
+let celsUnit = document.querySelector("#cels-link");
+celsUnit.addEventListener("click", convertToCels);
+
+let celsTemp = null;
 
 let currLocatButton = document.querySelector(".currLocatButton");
 currLocatButton.addEventListener("click", getCurrLocat);
-
 
 let search = document.querySelector("#search-form");
 search.addEventListener("submit", handleSearch);
