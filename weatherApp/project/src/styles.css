@@ -74,6 +74,12 @@ span {
   color: #fff !important;
   text-shadow: 2px 2px 2px #000 !important;
 }
+#cels-link {
+  padding-right: 3px;
+}
+#min {
+  padding-right: 3px;
+}
 #convert {
   color: #fff !important;
   text-shadow: 1px 1px 2px #000 !important;
@@ -94,7 +100,7 @@ span {
 
 
 #cels-link, #fahr-link {
-  padding-left: 5px;
+  padding-left: 3px;
   color: #fff;
   font-size: 14px;
 }
