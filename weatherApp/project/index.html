@@ -29,17 +29,24 @@
     <div class="container">
       <div class="row">
         <div class="col-4 currentWeatherPlatform" id="currWeaPlat">
-          <img id="mainWeatherIcon" src="https://openweathermap.org/img/wn/10d@2x.png"/>
+          <img
+            id="mainWeatherIcon"
+            src="https://openweathermap.org/img/wn/10d@2x.png"
+          />
           <br />
           <p class="mainWeather">
             <span class="nowTemp"> 25°C</span>
-            <i class="fa-solid fa-arrows-rotate" id="convert"></i>
+            <span id="convert">
+              <a href="#" id="cels-link" class="active">°C</a> |
+              <a href="#" id="fahr-link">°F</a>
+            </span>
           </p>
           <p class="currentWeatherRange">
             <span id="min"> 21</span>°|<span id="max"> 34</span>°
           </p>
-          <span id="weatherDescription">Clear Sky </span>
+          
           <div class="row weatherSpecs">
+            <span id="weatherDescription">Clear Sky </span> <br />
             <button class="col-6" id="windButton">
               Wind <span id="wind">10</span>km/h
             </button>
@@ -111,9 +118,9 @@
               </li>
             </ul>
           </div>
-   <hr />
+          <hr />
           <div class="row searchBar">
-            <form  id="search-form">
+            <form id="search-form">
               <input
                 type="text"
                 class="cityInput"
@@ -128,7 +135,6 @@
               </button>
             </form>
           </div>
-       
         </div>
       </div>
     </div>

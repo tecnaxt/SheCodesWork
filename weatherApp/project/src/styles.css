@@ -35,8 +35,9 @@ i {
   color: rgb(0, 0, 0);
 }
 
+
 hr {
-  border: 1px solid #000000 !important;
+  border: 1px solid #cbcbcb !important;
   opacity: 7 !important;
   box-shadow: 2px 2px 5px rgb(0, 0, 0);
 }
@@ -75,13 +76,23 @@ span {
   text-shadow: 2px 2px 2px #000 !important;
 }
 
+#mainWeatherIcon {
+  margin: -20px auto;
+}
+
 #weatherDescription {
+  display: block;
+  margin: auto;
+  text-align: center;
   text-transform: capitalize;
   font-size: 20px;
 }
 
-#convert {
-  font-size: 13px;
+
+#cels-link, #fahr-link {
+  padding-left: 5px;
+  color: #fff;
+  font-size: 14px;
 }
 
 #currWeaPlat {
@@ -153,17 +164,20 @@ span {
 .mainWeather {
   margin-top: 10px;
   margin-bottom: 2px;
+  margin-left: 25px;
+  padding-left: 20px;
 }
 .nowTemp {
+  text-align: center;
   font-size: 55px;
-  margin: auto;
+  margin: 10px auto !important;
   line-height: 45px;
   padding: 0;
 }
 
 .currentWeatherRange {
   padding: 0;
-  margin: auto;
+  margin: 0px 20px auto;
   font-size: 18px;
   font-family: "Courier New", Courier, monospace;
   font-weight: 500;
@@ -177,8 +191,11 @@ span {
   text-shadow: 2px 2px 4px #000;
   text-align: left;
   list-style-type: none;
-  padding: 20px;
-  margin: 25px 5px auto;
+  padding: 5px;
+  margin: 35px 5px auto !important;
+}
+.timeDate {
+  margin-top: 30px;
 }
 
 .forecastWeatherPlatform {
@@ -223,12 +240,12 @@ span {
 }
 
 .cityInput {
-  margin: 10px 5px auto;
+  margin: 5px 5px auto;
   margin-right: 0px;
   padding: 6px;
   padding-right: 0px;
-  width: 400px;
-  border: 1px solid #000000;
+  width: 500px;
+  border: 1px solid #c0bdbd;
   border-radius: 7px;
   background-color: #ffffff;
   font-family: "Abel";
