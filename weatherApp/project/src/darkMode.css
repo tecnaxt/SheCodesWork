@@ -117,13 +117,17 @@ span {
 #windButton,
 #humidButton {
   display: block;
-  margin: 25px auto;
-  margin-right: 3px;
-  padding: 0px;
+  margin: 10px auto;
+  padding: 2px;
   border: none;
   background-color: #ffffff4d;
   border-radius: 7px;
   box-shadow: 1px 1px 2px rgb(255, 255, 255);
+}
+
+#windButton {
+  margin-left: 20px;
+  margin-right: 5px;
 }
 
 #current-date {
