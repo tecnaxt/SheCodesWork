@@ -125,6 +125,21 @@ function convertToCels(event) {
   convertedCelsMax.innerHTML = Math.round(maxiTemp) + "°";;
 }
 
+function changeTheme(event) {
+  event.preventDefault();
+  let btnText = document.querySelector(".modeBtn");
+  let swapStylesheet = document.querySelector(".theme-sheet");
+
+  if (btnText.textContent.trim() === "Dark Mode") {
+    swapStylesheet.setAttribute("href", "src/darkMode.css");
+    btnText.textContent = "Light Mode";
+  } 
+  else if ((btnText.textContent === "Light Mode")) {
+    swapStylesheet.setAttribute("href", "src/styles.css");
+    btnText.textContent = "Dark Mode";
+  }
+}
+
 let fahrUnit = document.querySelector("#fahr-link");
 fahrUnit.addEventListener("click", convertToFahr);
 
@@ -140,5 +155,8 @@ currLocatButton.addEventListener("click", getCurrLocat);
 
 let search = document.querySelector("#search-form");
 search.addEventListener("submit", handleSearch);
+
+let ModeButton = document.querySelector(".modeBtn");
+ModeButton.addEventListener("click", changeTheme);
 
 searchInputCity("Polokwane");

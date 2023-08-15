@@ -32,13 +32,13 @@ i {
   display: block;
   margin: auto;
   font-size: 40px;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
 }
 
 hr {
-  border: 1px solid #fff !important;
+  border: 1px solid #cbcbcb !important;
   opacity: 7 !important;
-  box-shadow: 2px 2px 5px #7d1010;
+ box-shadow: 1px 1px 2px rgb(255, 255, 255);
 }
 
 ul {
@@ -49,7 +49,7 @@ ul {
 strong {
   text-align: center;
   font-size: 20px;
-  text-shadow: 2px 1px 2px #7d1010;
+  text-shadow: 2px 1px 2px #ffffff;
 }
 
 small {
@@ -58,10 +58,10 @@ small {
 }
 
 span {
-  color: #000;
+  color: #ffffff;
 }
 
-
+#city-name,
 #min,
 #max,
 #humid,
@@ -70,12 +70,11 @@ span {
 #current-date,
 #windButton,
 #humidButton {
-  color: #fff !important;
-  text-shadow: 2px 2px 2px #7d1010;
+  color: #ffffff !important;
+  text-shadow: 1px 1px 2px #ffffff !important;
 }
-#city-name{
-  color: #fff;
-  text-shadow: 1px 1px 2px #7d1010;
+#body-section {
+    background-color: #242424;
 }
 
 #cels-link {
@@ -85,8 +84,8 @@ span {
   padding-right: 3px;
 }
 #convert {
-  color: #fff !important;
-  text-shadow: 1px 1px 2px #7d1010 !important;
+  color: #ffffff !important;
+  text-shadow: 1px 1px 2px #4d4c4c !important;
 }
 
 #mainWeatherIcon {
@@ -104,7 +103,7 @@ span {
 #cels-link,
 #fahr-link {
   padding-left: 3px;
-  color: #fff;
+  color: #ffffff;
   font-size: 14px;
 }
 #cels-link,
@@ -118,26 +117,21 @@ span {
 #windButton,
 #humidButton {
   display: block;
-  margin: 10px auto;
-  padding: 2px;
+  margin: 25px auto;
+  margin-right: 3px;
+  padding: 0px;
   border: none;
-  background-color: #510606be;
+  background-color: #ffffff4d;
   border-radius: 7px;
-  box-shadow: 2px 2px 5px rgb(0, 0, 0);
+  box-shadow: 1px 1px 2px rgb(255, 255, 255);
 }
-
-#windButton {
-  margin-left: 25px;
-  margin-right: 5px;
-}
-
 
 #current-date {
   font-size: 24px !important;
   font-weight: 300 !important;
 }
 #current-time {
-  text-shadow: 2px 2px 2px #7d1010 !important;
+  text-shadow: 1px 1px 2px #ffffff !important;
 }
 
 .timeDate,
@@ -145,82 +139,77 @@ span {
 .fa-magnifying-glass,
 .fa-location-dot,
 .nowTemp,
+.fa-map-pin,
 .fa-droplet,
 .fa-wind {
-  text-shadow: 2px 2px 4px #7d1010;
-  color: #fff;
+  text-shadow: 1px 1px 2px #ffffff;
+  color: #f8f6f6;
 }
+
 .forecast {
   font-size: 22px;
   color: #fff;
   font-family: "Roboto slab";
   font-weight: 500;
-  text-shadow: 1px 1px 2px #7d1010;
+  text-shadow: 1px 1px 2px #7c7c7c;
 }
-.fa-angles-right {
-  color: #fff;
-  text-shadow: 1px 1px 2px #7d1010;
-}
+
 .fa-droplet,
 .fa-wind {
   font-size: 20px;
 }
 
 .fa-magnifying-glass,
-.fa-location-dot,.fa-angles-right {
+.fa-location-dot, .fa-angles-right {
   font-size: 22px;
   padding: 4px 5px 9px;
 }
 
-.fa-map-pin {
-  color: #fff;
-  text-shadow: 1px 1px 2px #7d1010;
-}
-
 .container {
-  position: relative;
   text-align: center;
   margin: 10px auto;
+  position: relative;
   padding: 25px;
   height: 505px;
-  box-shadow: 5px 5px 10px rgb(0, 0, 0);
+  box-shadow: 3px 3px 10px rgb(86, 85, 85);
   border-radius: 10px;
   font-family: "Abel";
-  color: #fff;
+  color: #ffffff;
   font-weight: 300;
-  background-image: url("../images/robert-katzki-fyHkeWGOpHM-unsplash.jpg");
+  background-color: #111111;
   background-size: 1400px 600px;
   background-repeat: no-repeat;
 }
-
 .modeBtn {
   position: absolute;
   bottom: 0;
   right: 0;
   padding: 5px;
-  background-color: #000;
-  border: 2px solid #fff;
+  background-color: #ffffff;
+  border: 2px solid #000000;
   border-radius: 7px;
-  text-shadow: 2px 2px 4px #7d1010;
-  color: #fff;
+  text-shadow: 2px 2px 4px #ffffff;
+  box-shadow: 1px 1px 2px rgb(255, 255, 255);
+  color: #000000;
 }
+
 .currentWeatherPlatform {
   display: block;
   text-align: center;
-  color: #fff;
+  color: #ffffff;
   margin: 10px 15px auto;
   padding: 15px;
   height: 450px;
-  background-color: #6110104e;
-  box-shadow: 5px 5px 8px #510606;
+  background-color: #5959594e;
+  box-shadow: 3px 3px 9px rgb(255, 254, 254);
   border-radius: 190px;
   transition: all 200ms ease-in-out;
 }
 
 .currentWeatherPlatform:hover {
   cursor: pointer;
-  box-shadow: 3px 3px 9px #510606;
-  backdrop-filter: blur(9px);
+  box-shadow: 3px 3px 9px rgb(255, 255, 255);
+  background-color: #474747;
 }
 .mainWeather {
   margin-top: 10px;
@@ -241,7 +230,7 @@ span {
 }
 
 .active {
-  color: #000 !important;
+  color: #000000 !important;
 }
 
 .currentWeatherRange {
@@ -256,8 +245,8 @@ span {
   display: block;
   font-size: 18px;
   font-family: "Abel";
-  color: #fff;
-  text-shadow: 2px 2px 4px #7d1010;
+  color: #ffffff;
+  text-shadow: 1px 1px 2px #ffffff;
   text-align: left;
   list-style-type: none;
   padding: 5px;
@@ -277,7 +266,7 @@ span {
 .col {
   display: inline-block;
   line-height: 30px;
-  background-color: #6110104e;
+  background-color: #6161614e;
   margin: 10px 15px;
   padding: 10px 18px;
   border-radius: 25px;
@@ -285,26 +274,17 @@ span {
 }
 .col:hover {
   cursor: pointer;
-  box-shadow: 1px 1px 2px rgb(2, 2, 2);
-  background-color: #510606be;
+  box-shadow: 1px 1px 2px rgb(255, 255, 255);
+  background-color: #5a5959be;
 }
 
 .range {
   font-family: "Courier New", Courier, monospace;
 }
 
-.fa-sun {
-  color: rgb(220, 219, 217);
-  text-shadow: 2px 2px 4px #7d1010;
-}
-.fa-cloud-sun {
-  color: rgb(220, 219, 217);
-  text-shadow: 2px 2px 4px #7d1010;
-}
-
-.fa-cloud-showers-heavy {
-  color: rgb(220, 219, 217);
-  text-shadow: 2px 2px 4px #7d1010;
+.fa-sun,.fa-cloud-sun,.fa-cloud-showers-heavy {
+  color: rgb(255, 255, 255);
+  text-shadow: 2px 2px 4px #686868;
 }
 
 .cityInput {
@@ -313,21 +293,21 @@ span {
   padding: 6px;
   padding-right: 0px;
   width: 500px;
-  border: 2px solid #cfcece;
+  border: 2px solid #444343;
   border-radius: 7px;
   background-color: #ffffff;
   font-family: "Abel";
-  box-shadow: 2px 2px 5px rgb(0, 0, 0);
+  box-shadow: 1px 1px 2px rgb(255, 255, 255);
 }
 
 .searchButton,
 .currLocatButton {
-  background-color: #510606be;
+  background-color: #494949be;
+  color: #ffffff;
   margin-right: 3px;
-  color: #fff;
   font-family: "Abel";
-  text-shadow: 1px 1px 3px #7d1010;
+  text-shadow: 1px 1px 3px #ffffff;
   border: none;
   border-radius: 4px;
-  box-shadow: 2px 2px 5px rgb(0, 0, 0);
+  box-shadow: 1px 1px 2px rgb(255, 255, 255);
 }
