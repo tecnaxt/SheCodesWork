@@ -40,6 +40,13 @@ if (hours < 10) {
 
 time.innerHTML = `${hours}:${minutes}`;
 
+function fetchForecast(coordinates) {
+  let apiKey = "2b6fdad0cbd018949c50c70f72250726";
+  let url = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&units=metric&appid=${apiKey}`;
+
+  axios.get(url).then(displayForecast);
+}
+
 function updateCityInfo(response) {
   console.log(response);
   let cityName = document.querySelector("#city-name");
@@ -59,7 +66,7 @@ function updateCityInfo(response) {
 
   cityName.innerHTML = response.data.name + ", " + response.data.sys.country;
   nowTemp.innerHTML = Math.round(response.data.main.temp);
-  minTemp.innerHTML = Math.round(response.data.main.temp_min)+ "°" ;
+  minTemp.innerHTML = Math.round(response.data.main.temp_min) + "°";
   maxTemp.innerHTML = Math.round(response.data.main.temp_max) + "°";
   humid.innerHTML = response.data.main.humidity + "%";
   windSpeed.innerHTML = Math.round(response.data.wind.speed) + " Km/H";
@@ -68,6 +75,47 @@ function updateCityInfo(response) {
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
+
+  fetchForecast(response.data.coord);
+}
+
+function formatDay(timestamp) {
+  let forecastDate = new Date(timestamp * 1000);
+  let weekdays = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
+
+  return weekdays[forecastDate.getDay()];
+}
+
+function displayForecast(response) {
+  let forecast = response.data.daily;
+  console.log(response.data.daily);
+  let forecastElement = document.querySelector("#forecast-columns");
+
+  let forecastHTML = `<div class="row">`;
+  forecast.forEach(function (day, index) {
+    if (`${index}` < 5) {
+      forecastHTML += `
+                  <div class="col-2 col">
+                  <strong>${formatDay(day.dt)}</strong>
+                  <br />
+                  <img
+                    id="rangeWeatherIcon"
+                    src="https://openweathermap.org/img/wn/${
+                      day.weather[0].icon
+                    }@2x.png"
+                  />
+                  <br />
+                  <span class="range">
+                    <span class="rangeMin">${Math.round(day.temp.min)}°</span>|
+                    <span class="rangeMax">${Math.round(day.temp.max)}°</span>
+                  </span>
+                </div>
+            `;
+    }
+  });
+
+  forecastHTML += `</div>`;
+  forecastElement.innerHTML = forecastHTML;
 }
 
 function searchInputCity(city) {
@@ -109,8 +157,8 @@ function convertToFahr(event) {
   celsUnit.classList.remove("active");
   fahrUnit.classList.add("active");
   convertedFahrTemp.innerHTML = Math.round(fahrFormula);
-  convertedFahrMin.innerHTML = Math.round(fahrMin) + "°";;
-  convertedFahrMax.innerHTML = Math.round(fahrMax) + "°";;
+  convertedFahrMin.innerHTML = Math.round(fahrMin) + "°";
+  convertedFahrMax.innerHTML = Math.round(fahrMax) + "°";
 }
 
 function convertToCels(event) {
@@ -121,8 +169,8 @@ function convertToCels(event) {
   celsUnit.classList.add("active");
   fahrUnit.classList.remove("active");
   convertedCelsTemp.innerHTML = Math.round(celsTemp);
-  convertedCelsMin.innerHTML = Math.round(miniTemp) + "°";;
-  convertedCelsMax.innerHTML = Math.round(maxiTemp) + "°";;
+  convertedCelsMin.innerHTML = Math.round(miniTemp) + "°";
+  convertedCelsMax.innerHTML = Math.round(maxiTemp) + "°";
 }
 
 function changeTheme(event) {
@@ -133,8 +181,7 @@ function changeTheme(event) {
   if (btnText.textContent.trim() === "Dark Mode") {
     swapStylesheet.setAttribute("href", "src/darkMode.css");
     btnText.textContent = "Light Mode";
-  } 
-  else if ((btnText.textContent === "Light Mode")) {
+  } else if (btnText.textContent === "Light Mode") {
     swapStylesheet.setAttribute("href", "src/styles.css");
     btnText.textContent = "Dark Mode";
   }

@@ -276,13 +276,17 @@ span {
   margin: 45px 10px auto;
 }
 
+.forecastColumns {
+  margin-left: 20px;
+}
+
 .col {
   display: inline-block;
   line-height: 30px;
   background-color: #6110104e;
-  margin: 10px 15px;
-  padding: 10px 5px;
-  border-radius: 25px;
+  margin: 5px 10px;
+  padding: 25px 5px;
+  border-radius: 55px;
   box-shadow: 1px 1px 2px rgb(0, 0, 0);
 }
 .col:hover {
@@ -301,8 +305,9 @@ span {
 }
 
 .rangeMax {
-  color: #ffffff;
-  text-shadow: 1px 1px 2px #7d1010}
+  color: #000000;
+  text-shadow: 1px 1px 2px #7d1010;
+}
 
 .fa-sun {
   color: rgb(220, 219, 217);
