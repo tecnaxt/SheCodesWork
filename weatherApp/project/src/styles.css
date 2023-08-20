@@ -63,7 +63,6 @@ span {
 
 
 #min,
-#max,
 #humid,
 #wind,
 #weatherDescription,
@@ -78,15 +77,13 @@ span {
   text-shadow: 1px 1px 2px #7d1010;
 }
 
-#cels-link {
-  padding-right: 3px;
-}
 #min {
   padding-right: 3px;
 }
-#convert {
-  color: #fff !important;
-  text-shadow: 1px 1px 2px #7d1010 !important;
+
+#max {
+  color: #000;
+  text-shadow: 1px 1px 2px #7d1010;
 }
 
 #mainWeatherIcon, #rangeWeatherIcon {
@@ -102,14 +99,12 @@ span {
   font-size: 20px;
 }
 
-#cels-link,
-#fahr-link {
+#cels-link {
   padding-left: 3px;
   color: #fff;
-  font-size: 14px;
+  font-size: 20px;
 }
-#cels-link,
-#fahr-link:hover {
+#cels-link:hover {
   cursor: default;
 }
 
@@ -131,7 +126,6 @@ span {
   margin-left: 20px;
   margin-right: 5px;
 }
-
 
 #current-date {
   font-size: 24px !important;
@@ -225,9 +219,9 @@ span {
   backdrop-filter: blur(9px);
 }
 .mainWeather {
-  margin-top: 10px;
+  margin-top: 10px !important;
   margin-bottom: 2px;
-  margin-left: 25px;
+  margin: auto;
   padding-left: 20px;
 }
 .mainWeather:hover {
@@ -240,10 +234,6 @@ span {
   margin: 10px auto !important;
   line-height: 45px;
   padding: 0;
-}
-
-.active {
-  color: #000 !important;
 }
 
 .currentWeatherRange {
@@ -300,7 +290,7 @@ span {
 }
 
 .rangeMin {
-  color: #000000;
+  color: #ffffff;
   text-shadow: 1px 1px 1px #7d1010;
 }
 

@@ -57,12 +57,6 @@ function updateCityInfo(response) {
   let windSpeed = document.querySelector("#wind");
   let descriptor = document.querySelector("#weatherDescription");
   let iconElement = document.querySelector("#mainWeatherIcon");
-  celsTemp = response.data.main.temp;
-  miniTemp = response.data.main.temp_min;
-  maxiTemp = response.data.main.temp_max;
-
-  celsUnit.classList.add("active");
-  fahrUnit.classList.remove("active");
 
   cityName.innerHTML = response.data.name + ", " + response.data.sys.country;
   nowTemp.innerHTML = Math.round(response.data.main.temp);
@@ -145,34 +139,6 @@ function getCurrLocat() {
   navigator.geolocation.getCurrentPosition(currentLocationButton);
 }
 
-function convertToFahr(event) {
-  event.preventDefault();
-  let convertedFahrTemp = document.querySelector(".nowTemp");
-  let convertedFahrMin = document.querySelector("#min");
-  let convertedFahrMax = document.querySelector("#max");
-  let fahrFormula = (celsTemp * 9) / 5 + 32;
-  let fahrMin = (miniTemp * 9) / 5 + 32;
-  let fahrMax = (maxiTemp * 9) / 5 + 32;
-
-  celsUnit.classList.remove("active");
-  fahrUnit.classList.add("active");
-  convertedFahrTemp.innerHTML = Math.round(fahrFormula);
-  convertedFahrMin.innerHTML = Math.round(fahrMin) + "°";
-  convertedFahrMax.innerHTML = Math.round(fahrMax) + "°";
-}
-
-function convertToCels(event) {
-  let convertedCelsTemp = document.querySelector(".nowTemp");
-  let convertedCelsMin = document.querySelector("#min");
-  let convertedCelsMax = document.querySelector("#max");
-
-  celsUnit.classList.add("active");
-  fahrUnit.classList.remove("active");
-  convertedCelsTemp.innerHTML = Math.round(celsTemp);
-  convertedCelsMin.innerHTML = Math.round(miniTemp) + "°";
-  convertedCelsMax.innerHTML = Math.round(maxiTemp) + "°";
-}
-
 function changeTheme(event) {
   event.preventDefault();
   let btnText = document.querySelector(".modeBtn");
@@ -186,16 +152,6 @@ function changeTheme(event) {
     btnText.textContent = "Dark Mode";
   }
 }
-
-let fahrUnit = document.querySelector("#fahr-link");
-fahrUnit.addEventListener("click", convertToFahr);
-
-let celsUnit = document.querySelector("#cels-link");
-celsUnit.addEventListener("click", convertToCels);
-
-let celsTemp = null;
-let miniTemp = null;
-let maxiTemp = null;
 
 let currLocatButton = document.querySelector(".currLocatButton");
 currLocatButton.addEventListener("click", getCurrLocat);
