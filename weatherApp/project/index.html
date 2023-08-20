@@ -48,11 +48,11 @@
           <div class="row weatherSpecs">
             <span id="weatherDescription">Clear Sky </span> <br />
             <button class="col-5" id="windButton">
-              <i class="fa-solid fa-wind"></i> Wind Speed<br/>
+              <i class="fa-solid fa-wind"></i> Wind Speed<br />
               <span id="wind"></span>
             </button>
             <button class="col-5" id="humidButton">
-              <i class="fa-solid fa-droplet"></i> Humidity <br/>
+              <i class="fa-solid fa-droplet"></i> Humidity <br />
               <span id="humid"></span>
             </button>
           </div>
@@ -72,51 +72,23 @@
           </h1>
           <hr />
           <div class="row row-col-5">
-            <p class="forecast">Weekly Forecast<i class="fa-solid fa-angles-right"></i></p>
+            <p class="forecast">
+              Weekly Forecast<i class="fa-solid fa-angles-right"></i>
+            </p>
             <ul>
               <li class="col">
                 <p>
                   <strong>WED</strong>
                   <br />
-                  <i class="fa-solid fa-cloud-sun"></i>
+                  <img
+                    id="rangeWeatherIcon"
+                    src="https://openweathermap.org/img/wn/10d@2x.png"
+                  />
                   <br />
-                  <span class="range">22°|34°</span>
-                </p>
-              </li>
-              <li class="col">
-                <p>
-                  <strong>THU</strong>
-                  <br />
-                  <i class="fa-solid fa-cloud-showers-heavy"></i>
-                  <br />
-                  <span class="range">13°|21°</span>
-                </p>
-              </li>
-              <li class="col">
-                <p>
-                  <strong>FRI</strong>
-                  <br />
-                  <i class="fa-solid fa-cloud-sun"></i>
-                  <br />
-                  <span class="range">20°|27°</span>
-                </p>
-              </li>
-              <li class="col">
-                <p>
-                  <strong>SAT</strong>
-                  <br />
-                  <i class="fa-solid fa-cloud-sun"></i>
-                  <br />
-                  <span class="range">19°|30°</span>
-                </p>
-              </li>
-              <li class="col">
-                <p>
-                  <strong>SUN</strong>
-                  <br />
-                  <i class="fa-solid fa-sun"></i>
-                  <br />
-                  <span class="range">27°|35°</span>
+                  <span class="range">
+                    <span class="rangeMin">22°</span>|
+                    <span class="rangeMax">34°</span>
+                  </span>
                 </p>
               </li>
             </ul>
@@ -138,9 +110,7 @@
               </button>
             </form>
           </div>
-          <button class="modeBtn">
-            Dark Mode
-          </button>
+          <button class="modeBtn">Dark Mode</button>
         </div>
       </div>
     </div>

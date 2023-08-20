@@ -89,8 +89,9 @@ span {
   text-shadow: 1px 1px 2px #7d1010 !important;
 }
 
-#mainWeatherIcon {
+#mainWeatherIcon, #rangeWeatherIcon {
   margin: -20px auto;
+  width: 100px !important;
 }
 
 #weatherDescription {
@@ -141,7 +142,6 @@ span {
 }
 
 .timeDate,
-.range,
 .fa-magnifying-glass,
 .fa-location-dot,
 .nowTemp,
@@ -150,6 +150,8 @@ span {
   text-shadow: 2px 2px 4px #7d1010;
   color: #fff;
 }
+
+
 .forecast {
   font-size: 22px;
   color: #fff;
@@ -279,7 +281,7 @@ span {
   line-height: 30px;
   background-color: #6110104e;
   margin: 10px 15px;
-  padding: 10px 18px;
+  padding: 10px 5px;
   border-radius: 25px;
   box-shadow: 1px 1px 2px rgb(0, 0, 0);
 }
@@ -292,6 +294,15 @@ span {
 .range {
   font-family: "Courier New", Courier, monospace;
 }
+
+.rangeMin {
+  color: #000000;
+  text-shadow: 1px 1px 1px #7d1010;
+}
+
+.rangeMax {
+  color: #ffffff;
+  text-shadow: 1px 1px 2px #7d1010}
 
 .fa-sun {
   color: rgb(220, 219, 217);
